@@ -7,13 +7,25 @@ www.youtube.com##ytd-watch-next-secondary-results-renderer
 www.youtube.com##.ytp-endscreen-content
 ! "Up next" autoplay panel
 www.youtube.com##ytd-compact-autoplay-renderer
-! Shorts shelf on homepage only
-www.youtube.com##ytd-rich-shelf-renderer[is-shorts]
-www.youtube.com##ytd-reel-shelf-renderer
 ! Homepage chips/filter bar
 www.youtube.com##ytd-feed-filter-chip-bar-renderer
 ! Playables
 www.youtube.com##ytd-game-card-renderer
 www.youtube.com##ytd-rich-shelf-renderer[component-style="RICH_SHELF_STYLE_GAMING"]
+
+! Shorts 
+youtube.com##ytd-rich-section-renderer:has(a[href^="/shorts/"])
+youtube.com##ytd-reel-shelf-renderer:has(a[href^="/shorts/"])
+youtube.com##ytm-reel-shelf-renderer
+youtube.com##.media-item-thumbnail-container[aria-hidden][href^="/shorts/"]
+youtube.com##ytm-media-item:has(a[href^="/shorts/"])
+youtube.com##.ytd-rich-shelf-renderer:has-text(Shorts)
+youtube.com##ytd-video-renderer > .ytd-video-renderer:has(a[href^="/shorts/"])
+youtube.com##.rich-section-content.fresh-feeds-dismissals
+youtube.com###[items.yt]-horizontal-list-renderer > ytd-reel-item-renderer
+youtube.com##.pivot-shorts.pivot-bar-item-tab
+youtube.com##.yt-simple-endpoint[title="Shorts"]
+youtube.com##.ytGridShelfViewModelHost
+youtube.com##.ytChipShapeHost:has-text(Shorts)
 ! Shorts button in left sidebar
 www.youtube.com##ytd-guide-entry-renderer:has(a[title="Shorts"])
